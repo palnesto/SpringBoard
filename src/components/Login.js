@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import logo from "../assets/palnesto_logo.png";
-
+import { Navigate } from "react-router-dom";
 class Login extends Component {
-  state = { email: "", password: "",error:false,errorMsg:"Invalid email or password" };
+  state = { email: "", password: "",error:false,errorMsg:"Invalid email or password",isCredentialsValid:false };
   submitForm = (event) => {
     event.preventDefault();
     const { email, password } = this.state;
     if (email === "springboard@gmail.com" && password === "12345678") {
-      this.setState(prevState=>({
-        loginSuccess:!prevState.loginSuccess
-      }));
-      window.location.href="./dashboard"
+      this.setState({
+        isCredentialsValid:true
+      });
       console.log("successful");
     }else{
         this.setState(prevState=>({
@@ -27,9 +26,9 @@ class Login extends Component {
     this.setState({ password: event.target.value });
   };
   render() {
-    const { email, password,errorMsg,error} = this.state;
+    const { email, password,errorMsg,error,isCredentialsValid} = this.state;
     return (
-      <>
+      <>{isCredentialsValid && <Navigate to = '/dashboard' replace={true} />}
         <div>
           <img
             src={logo}
@@ -121,7 +120,6 @@ class Login extends Component {
                 > 
                   Login
                 </button>
-                
                 {error &&
                 <p style={{marginLeft:"10%",color:"red",fontSize:"15px"}}>*{errorMsg}</p>}
               </div>
