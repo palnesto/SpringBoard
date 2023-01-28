@@ -23,16 +23,15 @@ class Dashboard extends Component {
           <div style={{ height: "15%", width: "15%" }}>
             <img src={logo} alt="palnesto-logo" />
           </div>
-          <div>
+          <div style={{display:"flex"}}>
             <button
               style={{
                 color: "#ffffff",
                 textDecoration: "none",
-                height: "50%",
-                marginRight: "50px",
-                marginTop: "20px",
+                height: "40%",
+                margin:"10px",
+                borderRadius: "8px",
                 backgroundColor: "#FA5D04",
-                borderRadius: "10px",
                 borderStyle: "none",
               }}
             >
@@ -43,9 +42,8 @@ class Dashboard extends Component {
                 style={{
                   color: "#ffffff",
                   textDecoration: "none",
+                  margin:"8px",
                   height: "50%",
-                  marginRight: "50px",
-                  marginTop: "20px",
                   backgroundColor: "#FA5D04",
                   borderRadius: "10px",
                   borderStyle: "none",
@@ -61,21 +59,21 @@ class Dashboard extends Component {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignSelf: "center",
-            marginLeft: "10%",
+            alignItems: "center",
           }}
         >
           <div>
-            <h1 style={{ marginLeft: "1%", fontSize: "30px" }}>
+            <h1 style={{fontSize: "130%" }}>
               Palnesto Hosting Solutions
             </h1>
           </div>
           <div
             style={{
+              padding:"5%",
               color: "#595959",
               boxShadow: "0px 4px 16px rgba(105, 105, 105, 0.25)",
-              height: "60vh",
-              width: "75vw",
+              height: "60%",
+              width: "70%",
             }}
           >
             <form onSubmit={this.submitForm}>
@@ -83,7 +81,7 @@ class Dashboard extends Component {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "space-around",
+                  justifyContent: "space-between",
                   borderColor: "#BFBFBF",
                   borderRadius: "5px",
                   borderStyle: "solid",
@@ -99,7 +97,7 @@ class Dashboard extends Component {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "space-around",
+                  justifyContent: "space-between",
                   borderColor: "#BFBFBF",
                   borderRadius: "5px",
                   borderStyle: "solid",
@@ -115,7 +113,7 @@ class Dashboard extends Component {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "space-around",
+                  justifyContent: "space-between",
                   borderColor: "#BFBFBF",
                   borderRadius: "5px",
                   borderStyle: "solid",
@@ -138,11 +136,11 @@ class Dashboard extends Component {
                     backgroundColor: "#FEC400",
                     color: "#ffffff",
                     borderStyle: "none",
-                    paddingLeft: "5%",
-                    paddingRight: "5%",
-                    paddingTop: "1%",
-                    paddingBottom: "1%",
-                    fontSize: "1em",
+                    paddingLeft: "20%",
+                    paddingRight: "20%",
+                    paddingTop: "2%",
+                    paddingBottom: "2%",
+                    fontSize: "100%",
                     textDecoration: "none",
                   }}
                 >
