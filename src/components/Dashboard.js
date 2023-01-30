@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import logo from "../assets/palnesto_logo.png";
 import invoice from "../assets/invoice.pdf";
 import { Link } from "react-router-dom";
-
+import './Dashboard.css';
 class Dashboard extends Component {
   state = {
-    company: "SpringBoard",
+    company: "Springboard School",
     paymentDate: "25/1/2023",
     expiryDate: "25/1/2024",
   };
@@ -20,8 +20,8 @@ class Dashboard extends Component {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ height: "15%", width: "15%" }}>
-            <img src={logo} alt="palnesto-logo" />
+          <div>
+            <img src={logo} alt="palnesto-logo" className="logo-container"/>
           </div>
           <div style={{display:"flex"}}>
             <button
@@ -60,6 +60,7 @@ class Dashboard extends Component {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginTop:"5%"
           }}
         >
           <div>
@@ -67,13 +68,10 @@ class Dashboard extends Component {
               Palnesto Hosting Solutions
             </h1>
           </div>
-          <div
+          <div className="card-container"
             style={{
-              padding:"5%",
               color: "#595959",
               boxShadow: "0px 4px 16px rgba(105, 105, 105, 0.25)",
-              height: "60%",
-              width: "70%",
             }}
           >
             <form onSubmit={this.submitForm}>
@@ -85,7 +83,7 @@ class Dashboard extends Component {
                   borderColor: "#BFBFBF",
                   borderRadius: "5px",
                   borderStyle: "solid",
-                  margin: "1%",
+                  marginBottom: "5%",
                   paddingLeft: "2%",
                   paddingRight: "2%",
                 }}
@@ -101,7 +99,7 @@ class Dashboard extends Component {
                   borderColor: "#BFBFBF",
                   borderRadius: "5px",
                   borderStyle: "solid",
-                  margin: "1%",
+                  marginBottom: "5%",
                   paddingLeft: "2%",
                   paddingRight: "2%",
                 }}
@@ -117,7 +115,7 @@ class Dashboard extends Component {
                   borderColor: "#BFBFBF",
                   borderRadius: "5px",
                   borderStyle: "solid",
-                  margin: "1%",
+                  marginBottom: "5%",
                   paddingLeft: "2%",
                   paddingRight: "2%",
                 }}
@@ -136,11 +134,10 @@ class Dashboard extends Component {
                     backgroundColor: "#FEC400",
                     color: "#ffffff",
                     borderStyle: "none",
-                    paddingLeft: "20%",
-                    paddingRight: "20%",
+                    paddingLeft: "25%",
+                    paddingRight: "25%",
                     paddingTop: "2%",
                     paddingBottom: "2%",
-                    fontSize: "100%",
                     textDecoration: "none",
                   }}
                 >

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "../assets/palnesto_logo.png";
 import { Navigate } from "react-router-dom";
+import './Login.css';
 class Login extends Component {
   state = {
     email: "",
@@ -45,19 +46,18 @@ class Login extends Component {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ height: "15%", width: "15%" }}>
-            <img src={logo} alt="palnesto-logo" />
+          <div>
+            <img src={logo} alt="palnesto-logo" className="logo-container" />
           </div>
           <div>
-            <button
+          <button
               style={{
                 color: "#ffffff",
                 textDecoration: "none",
-                height: "40%",
-                marginTop: "5%",
-                marginRight: "5%",
-                backgroundColor: "#FA5D04",
+                height: "60%",
+                margin:"10px",
                 borderRadius: "8px",
+                backgroundColor: "#FA5D04",
                 borderStyle: "none",
               }}
             >
@@ -71,60 +71,54 @@ class Login extends Component {
             flexDirection: "column",
             justifyContent: "center",
             alignSelf: "center",
+            marginTop:"3%"
           }}
-        >
+        ><h1 style={{ fontSize: "150%",textAlign:"center" }}>Palnesto Hosting Solutions</h1>
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
               alignItems: "center",
             }}
           >
-            <h1 style={{ fontSize: "130%" }}>Palnesto Hosting Solutions</h1>
             <div
+            className="card-containers"
               style={{
                 display:"flex",
-                justifyContent:"center",
                 color: "#595959",
                 boxShadow: "0px 4px 16px rgba(105, 105, 105, 0.25)",
-                paddingLeft: "4%",
-                paddingTop:"4%",
-                paddingRight:"6%",
-                paddingBottom:"4%",
+                
               }}
             >
               <form onSubmit={this.submitForm}>
-                <h1
-                  style={{
-                    fontSize: "130%",
-                  }}
+                <h1 className="login-title"
                 >
                   Login
                 </h1>
                 <div style={{display:"flex",flexDirection:"column", justifyContent:"center",alignItems:"flex-start"}}>
                   <label
                     htmlFor="email"
-                    style={{ fontSize: "100%"}}
+                    className="sub-title"
                   >
                     Email
                   </label>
                   <div>
                     <input
+                    size="25"
                     value={email}
                     onChange={this.onChangeEmail}
                     id="email"
                     type="email"
                     placeholder="abc@gmail.com"
+                    className="input-field"
                     style={{
                       marginBottom: "10%",
                       borderColor: "#929292",
                       borderWidth: "1px",
                       borderStyle: "solid",
-                      borderRadius: "8px",
-                      padding: "1.5%",
-                      paddingLeft:"5px",
-                      width:"100%"
+                      marginTop:"2%",
+                      width:"100%",
+                      color:"#BABABA",
                     }}
                   />
                   </div>
@@ -132,42 +126,36 @@ class Login extends Component {
                 <div style={{display:"flex",flexDirection:"column", justifyContent:"center",alignItems:"flex-start"}}>
                   <label
                     htmlFor="password"
-                    style={{fontSize: "100%" }}
+                    className="sub-title"
                   >
                     Password
                   </label>
                   <div>
                     <input
+                    size="25"
                     value={password}
                     onChange={this.onChangePassword}
                     id="password"
                     type="password"
+                    className="input-field"
                     style={{
                       marginBottom: "10%",
                       borderColor: "#929292",
                       borderWidth: "1px",
                       borderStyle: "solid",
-                      borderRadius: "8px",
-                      padding: "1.5%",
-                      paddingLeft:"5px",
+                      marginTop:"2%",
                       width:"100%"
                     }}
                   />
                   </div>
                   
                 </div>
-                <div style={{ marginBottom: "5%", textAlign: "center" }}>
-                  <button
+                <div >
+                  <button className="login-button"
                     style={{
-                      borderRadius: "8px",
                       backgroundColor: "#FEC400",
                       color: "#ffffff",
                       borderStyle: "none",
-                      paddingLeft: "40%",
-                      paddingRight: "40%",
-                      paddingTop: "5%",
-                      paddingBottom: "5%",
-                      width:"100%"
                     }}
                   >
                     Login

@@ -1,0 +1,77 @@
+@media (min-width:768px){
+    .card-containers{
+        height:425px;
+        width:300px;
+        padding-left: 2%;
+    }
+    .login-title{
+        font-size: 200%;
+        margin-bottom:40px;
+    }
+    .sub-title{
+        font-size: 180%;
+        margin-bottom:5px;
+    }
+    .login-button{
+        border-radius: 10px;
+        height:40px;
+        padding-right:52.5%;
+        padding-left:52.5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin-top:20px;
+        font-size:120%;
+    }
+    .logo-container{
+        height:90%;
+        width:60%;
+    }
+    .input-field{
+        border-radius: 10px;
+        height:30px;
+        padding-right:25%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+}
+@media (max-width:767px){
+    .card-containers{
+        height:450px;
+        width:300px;
+        padding-left: 10%;
+        padding-top: 5%;
+    }
+    .login-title{
+        font-size: 150%;
+        margin-bottom:40px;
+    }
+    .sub-title{
+        font-size: 150%;
+        margin-bottom:20px;
+    }
+    .logo-container{
+        height:80%;
+        width:40%;
+    }
+    .login-button{
+        border-radius: 10px;
+        height:40px;
+        padding-right:52.5%;
+        padding-left:52.5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin-top:20px;
+        font-size:120%;
+    }
+    .input-field{
+        border-radius: 10px;
+        height:30px;
+        padding-right:25%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        padding-left: 2%;
+    }
+}
+::placeholder{
+    opacity:0.2
+}
